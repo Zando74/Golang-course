@@ -90,42 +90,26 @@ Dans ce dernier exercice, nous allons mettre en œuvre le maximum de concepts qu
 
 Voici les fonctionnalités que nous souhaitons implémenter :
 
-1. Création d'une tâche : L'utilisateur doit pouvoir créer une nouvelle tâche en spécifiant un titre et une description.
+1. Création d'une tâche : L'utilisateur doit pouvoir créer une nouvelle tâche en spécifiant au moins un titre et une description.
 
-2. Affichage des tâches : L'utilisateur doit pouvoir afficher la liste des tâches existantes avec leur titre et leur description.
+2. Affichage des tâches : L'utilisateur doit pouvoir afficher la liste des tâches existantes.
 
-3. Marquage des tâches terminées : L'utilisateur doit pouvoir marquer une tâche comme terminée.
+3. Marquage des tâches terminées : L'utilisateur doit au moins pouvoir marquer une tâche comme terminée et au mieux gérer différents états (à faire, en cours, en pause, etc... ).
 
 4. Suppression des tâches : L'utilisateur doit pouvoir supprimer une tâche de la liste.
 
-5. Sauvegarde des tâches : Les tâches doivent être sauvegardées dans un fichier pour pouvoir être récupérées ultérieurement.
+5. Sauvegarde des tâches : Les tâches doivent être sauvegardées au moins dans un fichier et au mieux dans une base de donnée pour pouvoir être récupérées ultérieurement.
 
 Pour implémenter cela, nous allons utiliser les concepts suivants :
 
-- Structures : Nous allons créer une structure `Task` avec les champs `title`, `description` et `completed` pour représenter une tâche.
+- Structures : Nous allons créer une structure `Task` avec les champs `title`, `description` et `status` pour représenter une tâche.
 
-- Slices : Nous allons utiliser un slice de `Task` pour stocker toutes les tâches.
+- Fonctionnalités : Nous allons créer des fonctions pour chaque fonctionnalité, par exemple `createTask`, `displayTasks`, `markTaskAsCompleted`, `deleteTask`, etc.
 
-- Fonctions : Nous allons créer des fonctions pour chaque fonctionnalité, par exemple `createTask`, `displayTasks`, `markTaskAsCompleted`, `deleteTask`, etc.
+- Fichiers ou base de donnée SQL : Nous utiliserons la lecture et l'écriture de fichiers ou de donnée en base pour sauvegarder et récupérer les tâches.
 
-- Boucles et conditions : Nous utiliserons des boucles et des conditions pour itérer sur les tâches, afficher les informations et effectuer les actions demandées par l'utilisateur.
+- Design Patterns : Nous pourrions également utiliser des designs pattern pour définir les problématiques générique (ex: pattern state pour la gestion de l'état des tâches).
 
-- Fichiers : Nous utiliserons la lecture et l'écriture de fichiers pour sauvegarder et récupérer les tâches.
+N'oubliez pas que la forme de votre application est libre. Vous pouvez choisir de créer une interface en ligne de commande (CLI) ou une application web avec une interface utilisateur graphique (GUI).
 
-- Interfaces : Nous pourrions également utiliser une interface pour définir les méthodes communes à toutes les fonctionnalités, par exemple `create`, `display`, `markAsCompleted`, `delete`, etc.
-
-Ce mini-projet vous permettra de mettre en pratique tous les concepts que vous avez appris jusqu'à présent et de consolider vos connaissances en programmation avec le langage GO.
-
-## Recommandations pour l'exercice 12: Mini-Projet
-
-Pour enrichir votre mini-projet de gestion de tâches, vous pouvez envisager l'utilisation de Design Patterns. Voici quelques recommandations :
-
-1. **Pattern Observer** : Utilisez ce pattern pour permettre à d'autres parties de votre application d'être informées lorsque des tâches sont créées, modifiées ou supprimées. Cela peut être utile pour mettre à jour l'interface utilisateur ou pour effectuer d'autres actions en fonction des événements liés aux tâches.
-
-2. **Pattern Factory** : Utilisez ce pattern pour créer des instances de tâches de manière flexible et centralisée. Vous pouvez avoir une fabrique de tâches qui prend en charge la création de différents types de tâches en fonction des paramètres fournis par l'utilisateur.
-
-3. **Pattern Strategy** : Utilisez ce pattern pour permettre à l'utilisateur de choisir différentes stratégies de tri ou de filtrage des tâches. Par exemple, vous pouvez implémenter des stratégies de tri par date, par priorité, par état, etc.
-
-4. **Pattern MVC** : Si vous souhaitez créer une application web pour piloter votre application de gestion de tâches, vous pouvez envisager d'utiliser le pattern MVC (Modèle-Vue-Contrôleur). Cela vous permettra de séparer la logique métier (Modèle), la présentation (Vue) et la gestion des interactions utilisateur (Contrôleur).
-
-N'oubliez pas que la forme de votre application est libre. Vous pouvez choisir de créer une interface en ligne de commande (CLI) ou une application web avec une interface utilisateur graphique (GUI). Vous pouvez également explorer d'autres options telles que les applications mobiles ou les interfaces de programmation (API) pour interagir avec votre application de gestion de tâches.
+N'hésitez pas à étudier les différentes ressources mise à disposition dans le repository pour vous aidez, vous y trouverez des exemples de codes mettant en oeuvre les principes SOLID, les designs patterns et des exemples d'architecture que vous pouvez utilisez pour le projet.
